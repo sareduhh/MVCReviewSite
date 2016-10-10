@@ -1,0 +1,82 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  
+}
+
+
+
+/*HEADER*/
+#headers {
+    background-color: #F9F5F5;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-top:15px;
+}
+
+#header-1{
+    font-family: 'Almendra SC', serif;
+    font-size:75px;
+}
+#header-2{
+    font-family: 'Shadows Into Light', cursive;
+    font-size:50px;
+   
+}
+#create-new{
+    color:#6A0B1E;
+    font-family: 'Almendra SC', serif;
+    text-align:center;
+    padding-top:15px;
+    font-size:15px;
+    
+}
+/*NAVBAR*/
+#navvy{
+    background-color:#6A0B1E;
+    color:#F4EEEF;
+    font-family: 'Shadows Into Light', cursive;
+    font-size:25px;
+}
+
+/*REVIEW BODY*/
+#body-content{
+    background-color:#F4EEEF;
+    color:#6A0B1E;
+     
+}
+#caption{
+    color:#6A0B1E;
+    background-color:#F9F5F5;
+    font-family: 'Almendra SC', serif;
+    font-size:15px;
+    font-style:oblique;
+}
+#boxes{
+    background-color:#C9A7AD;
+    color:#6A0B1E;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    background-color:#C9A7AD;
+    color:#6A0B1E;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}

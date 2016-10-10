@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MVCReviewSite.Models.Review>
+
+@{
+    ViewBag.Title = "Write A Review";
+}
+@*<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="Site.css" rel="stylesheet" />
+</head>
+<body>*@
+
+<div class="headers" id="headers">
+   <div class="header-1" id="header-1">
+        <h1><b>Westeros</b></h1>
+    </div>
+    <div class="header-2" id="header-2">
+        <h4>Write a Review</h4>
+    </div>
+</div>
+<div class="create-new" id="create-new">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+</div>
+    @*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublishedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+
+            <th></th>
+        </tr>*@
+
+    @foreach (var item in Model)
+    {
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="boxes">
+            <div class="thumbnail" id="thumbnail">
+                <div class="caption" id="caption">
+
+                   <h3>@Html.DisplayFor(modelItem => item.UserName)</h3>
+                   <p>@Html.DisplayFor(modelItem => item.Category.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Title)</p>
+                    <p>@Html.DisplayFor(modelItem => item.PublishedDate)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Content)</p>
+                    <p>@Html.ActionLink("Details", "Details", new { id = item.ID })</p>
+                </div>
+            </div>
+        </div>
+      @*  @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |*@
+                       @* @Html.ActionLink("Details", "Details", new { id = item.ID }) *@
+  @*  @Html.ActionLink("Delete", "Delete", new { id = item.ID })*@
+
+    }
+
+
+
+@*</body>
+
+</html>*@
